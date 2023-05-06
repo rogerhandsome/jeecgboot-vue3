@@ -25,7 +25,7 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
   import ChartGroupCard from '../components/ChartGroupCard.vue';
-  import SaleTabCard from '../components/SaleTabCard.vue';
+  // import SaleTabCard from '../components/SaleTabCard.vue';
   import LineMulti from '/@/components/chart/LineMulti.vue';
   import HeadInfo from '/@/components/chart/HeadInfo.vue';
   import { getLoginfo, getVisitInfo } from '../api.ts';
