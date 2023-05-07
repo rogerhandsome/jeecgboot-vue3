@@ -27,9 +27,9 @@
                   <div class="aui-flex-box" :class="activeIndex === 'accountLogin' ? 'activeNav on' : ''" @click="loginClick('accountLogin')"
                     >{{ t('sys.login.signInFormTitle') }}
                   </div>
-<!--                  <div class="aui-flex-box" :class="activeIndex === 'phoneLogin' ? 'activeNav on' : ''" @click="loginClick('phoneLogin')"-->
-<!--                    >{{ t('sys.login.mobileSignInFormTitle') }}-->
-<!--                  </div>-->
+                  <div class="aui-flex-box" :class="activeIndex === 'phoneLogin' ? 'activeNav on' : ''" @click="loginClick('phoneLogin')"
+                    >{{ t('sys.login.mobileSignInFormTitle') }}
+                  </div>
                 </div>
                 <div class="aui-form-box" style="height: 180px">
                   <a-form ref="loginRef" :model="formData" v-if="activeIndex === 'accountLogin'" @keyup.enter.native="loginHandleClick">
@@ -336,7 +336,7 @@
       createMessage.warn(t('sys.login.mobilePlaceholder'));
       return;
     }
-    const result = await getCaptcha({ mobile: phoneFormData.mobile, smsmode: SmsEnum.FORGET_PASSWORD });
+    const result = await getCaptcha({ mobile: phoneFormData.mobile, smsmode: SmsEnum.LOGIN });
     if (result) {
       const TIME_COUNT = 60;
       if (!unref(timer)) {
