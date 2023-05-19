@@ -32,3 +32,5 @@ pnpm-debug.log*
 /.vscode/
 /.history/
 /svn clear.bat
+ant-design-vue-jeecg.code-workspace
+dist.zip
